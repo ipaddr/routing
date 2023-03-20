@@ -6,13 +6,15 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" routerLinkActive="active" 
+                [routerLinkActiveOptions]="{exact: true}" 
+                routerLink="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Server</a>
+                <a class="nav-link" routerLinkActive="active" routerLink="/servers">Server</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">User</a>
+                <a class="nav-link" routerLinkActive="active" [routerLink]="['/users']">User</a>
               </li> 
             </ul>
           </div>
@@ -20,7 +22,8 @@
       </nav>
     </div>
   </div>
-  <div class="row">
+  <router-outlet></router-outlet>
+  <!-- <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <app-home></app-home>
     </div>
@@ -34,5 +37,5 @@
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <app-servers></app-servers>
     </div>
-  </div>
+  </div> -->
 </div>
